@@ -107,6 +107,7 @@ Se implementaron múltiples estrategias de optimización para mejorar el rendimi
 # 🛠 Tecnologías Utilizadas
 
 - **Python** 🐍
+- **Numpy** 🔢
 - **Pandas** 🐼
 - **SQL Server** 🗄️
 
