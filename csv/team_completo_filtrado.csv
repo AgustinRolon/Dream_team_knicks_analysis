@@ -1,0 +1,31 @@
+team_id,full_name,team_abbreviation,nickname,city,state,year_founded,arena,arenacapacity,headcoach
+1610612737,Atlanta Hawks,[ATL],Hawks,Atlanta,Atlanta,1949,State Farm Arena,18729,Quin Snyder
+1610612738,Boston Celtics,[BOS],Celtics,Boston,Massachusetts,1946,TD Garden,19080,Joe Mazzulla
+1610612739,Cleveland Cavaliers,[CLE],Cavaliers,Cleveland,Ohio,1970,Rocket Mortgage FieldHouse,19431,Kenny Atkinson
+1610612740,New Orleans Pelicans,[NOP],Pelicans,New Orleans,Louisiana,2002,Smoothie King Center,16500,Willie Green
+1610612741,Chicago Bulls,[CHI],Bulls,Chicago,Illinois,1966,United Center,21711,Billy Donovan
+1610612742,Dallas Mavericks,[DAL],Mavericks,Dallas,Texas,1980,American Airlines Center,19200,Jason Kidd
+1610612743,Denver Nuggets,[DEN],Nuggets,Denver,Colorado,1976,Ball Arena,19000,Michael Malone
+1610612744,Golden State Warriors,[GSW],Warriors,Golden State,California,1946,Chase Center,18064,Steve Kerr
+1610612745,Houston Rockets,[HOU],Rockets,Houston,Texas,1967,Toyota Center,18104,Ime Udoka
+1610612746,Los Angeles Clippers,[LAC],Clippers,Los Angeles,California,1970,Crypto.com Arena,19060,Tyronn Lue
+1610612747,Los Angeles Lakers,[LAL],Lakers,Los Angeles,California,1948,Crypto.com Arena,19060,Darvin Ham
+1610612748,Miami Heat,[MIA],Heat,Miami,Florida,1988,Kaseya Center,19600,Erik Spoelstra
+1610612749,Milwaukee Bucks,[MIL],Bucks,Milwaukee,Wisconsin,1968,Fiserv Forum,17500,Adrian Griffin
+1610612750,Minnesota Timberwolves,[MIN],Timberwolves,Minnesota,Minnesota,1989,Target Center,19061,Chris Finch
+1610612751,Brooklyn Nets,[BKN],Nets,Brooklyn,New York,1976,Barclays Center,17732,Jacque Vaughn
+1610612752,New York Knicks,[NYK],Knicks,New York,New York,1946,Madison Square Garden,19690,Tom Thibodeau
+1610612753,Orlando Magic,[ORL],Magic,Orlando,Florida,1989,Amway Center,18000,Jamahl Mosley
+1610612754,Indiana Pacers,[IND],Pacers,Indiana,Indiana,1976,Gainbridge Fieldhouse ,18345,Rick Carlisle
+1610612755,Philadelphia 76ers,[PHI],76ers,Philadelphia,Pennsylvania,1949,Wells Fargo Center,20341,Nick Nurse
+1610612756,Phoenix Suns,[PHX],Suns,Phoenix,Arizona,1968,Footprint Center,17071,Frank Vogel
+1610612757,Portland Trail Blazers,[POR],Trail Blazers,Portland,Oregon,1970,Moda Center,19980,Chauncey Billups
+1610612758,Sacramento Kings,[SAC],Kings,Sacramento,California,1948,Golden 1 Center,17500,Mike Brown
+1610612759,San Antonio Spurs,[SAS],Spurs,San Antonio,Texas,1976,AT&T Center,18694,Gregg Popovich
+1610612760,Oklahoma City Thunder,[OKC],Thunder,Oklahoma City,Oklahoma,1967,Paycom Center,18203,Mark Daigneault
+1610612761,Toronto Raptors,[TOR],Raptors,Toronto,Ontario,1995,Scotiabank Arena,19800,Darko Rajakovic
+1610612762,Utah Jazz,[UTA],Jazz,Utah,Utah,1974,Delta Center,18306,Will Hardy
+1610612763,Memphis Grizzlies,[MEM],Grizzlies,Memphis,Tennessee,1995,FedExForum,18119,Taylor Jenkins
+1610612764,Washington Wizards,[WAS],Wizards,Washington,District of Columbia,1961,Capital One Arena,20647,Wes Unseld
+1610612765,Detroit Pistons,[DET],Pistons,Detroit,Michigan,1948,Little Caesars Arena,20332,Monty Williams
+1610612766,Charlotte Hornets,[CHA],Hornets,Charlotte,North Carolina,1988,Spectrum Center,19026,Steve Clifford
