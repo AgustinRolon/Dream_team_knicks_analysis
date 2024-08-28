@@ -19,10 +19,9 @@ Este repositorio alberga un análisis exhaustivo del rendimiento de los jugadore
 
 # 📂 Estructura del Repositorio
 
-- `data/`: Contiene los datasets utilizados en el proyecto.
-- `sql/`: Scripts SQL para la creación de tablas y objetos en la base de datos.
-- `etl/`: Scripts de ETL para la carga y transformación de datos.
-- `notebooks/`: Notebooks de Jupyter para análisis exploratorio.
+- `csv/`: Contiene los csv resultantes del proyecto.
+- `sql/`: Scripts SQL para la creación de tablas y objetos en la base de datos, junto con la ingesta de datos y la automatizacion.
+- `notebooks_proceso_etl/`: Scripts de ETL para la carga y transformación de datos.
 
 # 🚧 Estado del Proyecto 🚧
 - **En construcción**

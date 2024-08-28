@@ -1,0 +1,23 @@
+Guardar el Script de SQL en un Archivo:
+
+Guarda tu script SQL (sp_CargarDatos) en un archivo .sql, por ejemplo, CargarDatos.sql.
+Crear un Archivo Batch:
+
+Crea un archivo .bat que ejecute el script SQL utilizando sqlcmd. Aquí te dejo un ejemplo de cómo podría ser el contenido del archivo batch:
+batch
+
+Copiar código:
+
+@echo off
+sqlcmd -S <TuServidorSQL> -d NBA_Player_Performance_DB -U <TuUsuarioSQL> -P <TuContraseñaSQL> -i "C:\Ruta\CargarDatos.sql"
+Reemplaza <TuServidorSQL>, <TuUsuarioSQL>, <TuContraseñaSQL>, y C:\Ruta\CargarDatos.sql con los valores correctos para tu entorno.
+Configurar una Tarea Programada en Windows:
+
+Abre el "Task Scheduler" (Programador de Tareas) en Windows.
+Crea una nueva tarea básica (Create Basic Task).
+Asigna un nombre a la tarea, como "Carga de Datos Semanal".
+Configura la tarea para que se ejecute semanalmente en el día y hora que prefieras.
+En "Acción", selecciona "Iniciar un programa" y selecciona el archivo .bat que has creado.
+Guarda la tarea y pruébala!
+
+Para asegurarte de que todo funcione correctamente, puedes ejecutar la tarea manualmente desde el "Task Scheduler" la primera vez.
