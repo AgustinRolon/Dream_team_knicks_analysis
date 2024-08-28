@@ -18,14 +18,14 @@ USE NBA_Player_Performance_DB;
 CREATE TABLE dim_player_info (
     player_id INT PRIMARY KEY NOT NULL,
     player_name VARCHAR(255) NOT NULL,
-	salary INT NOT NULL
+	salary INT NOT NULL CHECK (salary >= 0)
 );
 
 --Tabla dim_game_info
 CREATE TABLE dim_game_info (
     game_id INT PRIMARY KEY NOT NULL,
     game_date DATE NOT NULL,
-    attendance INT
+    attendance INT CHECK (attendance >= 0)
 );
 
 --Tabla dim_team
@@ -46,7 +46,8 @@ CREATE TABLE dim_team (
 CREATE TABLE dim_season (
 	season_id INT PRIMARY KEY NOT NULL,
 	start_date DATE NOT NULL,
-	end_date DATE NOT NULL
+	end_date DATE NOT NULL,
+	CHECK (start_date < end_date)
 )
 
 --Tabla fact_game_stats
@@ -58,8 +59,8 @@ CREATE TABLE fact_game_stats (
     game_id INT NOT NULL,
     game_date date NOT NULL,
     matchup_home VARCHAR(255) NOT NULL,
-    wl_home VARCHAR(1) NOT NULL,
-    game_minutes int NOT NULL,
+    wl_home VARCHAR(1) NOT NULL CHECK (wl_home IN ('W', 'L')),
+    game_minutes int NOT NULL CHECK (game_minutes >= 0),
     fgm_home FLOAT,
     fga_home FLOAT,
     fg_pct_home FLOAT,
@@ -83,7 +84,7 @@ CREATE TABLE fact_game_stats (
     team_abbreviation_away VARCHAR(5) NOT NULL,
     team_name_away VARCHAR(255) NOT NULL,
     matchup_away VARCHAR(255) NOT NULL,
-    wl_away VARCHAR(1) NOT NULL,
+    wl_away VARCHAR(1) NOT NULL CHECK (wl_away IN ('W', 'L')),
     fgm_away FLOAT,
     fga_away FLOAT,
     fg_pct_away FLOAT,
@@ -111,43 +112,45 @@ CREATE TABLE fact_game_stats (
 	FOREIGN KEY (season_id) REFERENCES dim_season (season_id),
 );
 
---Tabla fact_player_stats
 CREATE TABLE fact_player_stats (
-    primary_key_composed VARCHAR(225) PRIMARY KEY NOT NULL,
-    player_id INT NOT NULL,
-    player_name VARCHAR(255) NOT NULL,
-    pos VARCHAR(10) NOT NULL,
-    age INT NOT NULL,
-    team_abbrevation VARCHAR(255) NOT NULL,
-    GP INT,
-    GS INT,
-    MP FLOAT,
-    FG FLOAT,
-    FGA FLOAT,
-    FG_percent FLOAT,
-    three_P FLOAT,
-    three_PA FLOAT,
-    three_P_percent FLOAT,
-    two_P FLOAT,
-    two_PA FLOAT,
-    two_P_percent FLOAT,
-    eFG_percent FLOAT,
-    FT FLOAT,
-    FTA FLOAT,
-    FT_percent FLOAT,
-    ORB FLOAT,
-    DRB FLOAT,
-    TRB FLOAT,
-    AST FLOAT,
-    STL FLOAT,
-    BLK FLOAT,
-    TOV FLOAT,
-    PF FLOAT,
-    PTS FLOAT,
+    primary_key_composed VARCHAR(255) PRIMARY KEY NOT NULL,
     season_id INT NOT NULL,
-    total_team VARCHAR(255),
-	FOREIGN KEY (player_id) REFERENCES dim_player_info(player_id),
-	FOREIGN KEY (season_id) REFERENCES dim_season(season_id)
+    player_id INT NOT NULL,
+    player_name VARCHAR(255) NOT NULL, 
+    team_id INT NOT NULL,
+    team_abbreviation VARCHAR(10) NOT NULL,
+    position VARCHAR(10) NOT NULL,
+    age INT NOT NULL,
+    GP INT, -- Games Played (Juegos Jugados)
+    GS INT, -- Games Started (Juegos Iniciados)
+    MP FLOAT, -- Minutes Played (Minutos Jugados)
+    FG FLOAT, -- Field Goals Made (Tiros de campo anotados)
+    FGA FLOAT, -- Field Goals Attempted (Tiros de campo intentados)
+    FG_pct FLOAT, -- Field Goal Percentage (Porcentaje de tiros de campo)
+    "3P" FLOAT, -- Three-Point Field Goals Made (Tiros de 3 puntos anotados)
+    "3PA" FLOAT, -- Three-Point Field Goals Attempted (Tiros de 3 puntos intentados)
+    "3P_pct" FLOAT, -- Three-Point Percentage (Porcentaje de tiros de 3 puntos)
+    "2P" FLOAT, -- Two-Point Field Goals Made (Tiros de 2 puntos anotados)
+    "2PA" FLOAT, -- Two-Point Field Goals Attempted (Tiros de 2 puntos intentados)
+    "2P_pct" FLOAT, -- Two-Point Percentage (Porcentaje de tiros de 2 puntos)
+    eFG_pct FLOAT, -- Effective Field Goal Percentage (Porcentaje de tiro efectivo)
+    FT FLOAT, -- Free Throws Made (Tiros libres anotados)
+    FTA FLOAT, -- Free Throws Attempted (Tiros libres intentados)
+    FT_pct FLOAT, -- Free Throw Percentage (Porcentaje de tiros libres)
+    ORB FLOAT, -- Offensive Rebounds (Rebotes ofensivos)
+    DRB FLOAT, -- Defensive Rebounds (Rebotes defensivos)
+    TRB FLOAT, -- Total Rebounds (Rebotes totales)
+    AST FLOAT, -- Assists (Asistencias)
+    STL FLOAT, -- Steals (Robos)
+    BLK FLOAT, -- Blocks (Bloqueos)
+    TOV FLOAT, -- Turnovers (Pérdidas de balón)
+    PF FLOAT, -- Personal Fouls (Faltas personales)
+    PTS FLOAT, -- Points (Puntos)
+    divisor_pie FLOAT,
+    pie FLOAT,
+    FOREIGN KEY (season_id) REFERENCES dim_season(season_id),
+    FOREIGN KEY (team_id) REFERENCES dim_team(team_id),
+    FOREIGN KEY (player_id) REFERENCES dim_player_info(player_id) 
 );
 
 -- Tabla fact_draft
@@ -155,9 +158,9 @@ CREATE TABLE fact_draft (
     draft_id INT PRIMARY KEY,
     player_name NVARCHAR(255),
     draft_season INT,
-    round_number INT,
-    round_pick INT,
-    overall_pick INT,
+    round_number INT CHECK (round_number IN (1, 2)),
+    round_pick INT CHECK (round_pick BETWEEN 1 AND 30),
+    overall_pick INT CHECK (overall_pick BETWEEN 1 AND 60),
     team_id INT,
     team_city NVARCHAR(255),
     team_name NVARCHAR(255),
@@ -184,4 +187,35 @@ CREATE TABLE fact_draft (
     three_quarter_sprint FLOAT,
 	FOREIGN KEY (team_id) REFERENCES dim_team (team_id)
 );
+
+CREATE TABLE fact_team_stats (
+    season_id INT NOT NULL,
+    team_id INT NOT NULL,
+    team_abbreviation VARCHAR(3) NOT NULL,
+    fgm FLOAT,
+    fga FLOAT,
+    fg_pct FLOAT,
+    fg3m FLOAT,
+    fg3a FLOAT,
+    fg3_pct FLOAT,
+    ftm FLOAT,
+    fta FLOAT,
+    ft_pct FLOAT,
+    oreb FLOAT,
+    dreb FLOAT,
+    reb FLOAT,
+    ast FLOAT,
+    stl FLOAT,
+    blk FLOAT,
+    tov FLOAT,
+    pf FLOAT,
+    pts FLOAT,
+    plus_minus INT,
+    pie_denominador FLOAT,
+	PRIMARY KEY (season_id, team_id),
+    FOREIGN KEY (season_id) REFERENCES dim_season(season_id),
+    FOREIGN KEY (team_id) REFERENCES dim_team(team_id)
+);
+
+
 
