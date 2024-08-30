@@ -39,7 +39,7 @@ player_id,Player,Salary
 1287,Malik Beasley,15558035
 536,Jordan Bell,0
 538,DeAndre' Bembry,0
-42,Dāvis Bertāns,0
+540,Dāvis Bertāns,0
 1296,Patrick Beverley,13801614
 1457,Saddiq Bey,2959080
 45,Tyler Bey,0
@@ -49,8 +49,8 @@ player_id,Player,Salary
 546,Nemanja Bjelica,0
 547,Eric Bledsoe,0
 548,Keljin Blevins,0
-52,Bogdan Bogdanović,0
-53,Bojan Bogdanović,0
+549,Bogdan Bogdanović,0
+550,Bojan Bogdanović,0
 1504,Bol Bol,2200000
 55,Marques Bolden,0
 56,Jordan Bone,0
@@ -81,7 +81,7 @@ player_id,Player,Salary
 587,Devontae Cacok,0
 1294,Kentavious Caldwell-Pope,14004703
 1634,Facundo Campazzo,464299
-84,Vlatko Čančar,0
+590,Vlatko Čančar,0
 1272,Clint Capela,18206896
 594,Vernon Carey Jr.,0
 1379,Jevon Carter,6025000
@@ -114,13 +114,13 @@ player_id,Player,Salary
 1424,Gorgui Dieng,4105236
 1268,Spencer Dinwiddie,19500000
 1412,Donte DiVincenzo,4500000
-117,Luka Dončić,0
+649,Luka Dončić,0
 1288,Luguentz Dort,15277778
 652,Damyean Dotson,0
 1649,Devon Dotson,169630
 654,Sekou Doumbouya,0
 1602,PJ Dozier,784654
-123,Goran Dragić,0
+660,Goran Dragić,0
 1450,Andre Drummond,3200000
 125,Jared Dudley,0
 1209,Kevin Durant,44119845
@@ -232,7 +232,7 @@ player_id,Player,Salary
 1434,Keldon Johnson,3873024
 1427,Stanley Johnson,4022164
 832,Tyler Johnson,0
-236,Nikola Jokić,0
+833,Nikola Jokić,0
 1498,Damian Jones,2298385
 837,Derrick Jones Jr.,0
 841,Mason Jones,0
@@ -277,7 +277,7 @@ player_id,Player,Salary
 280,Karim Mané,0
 1533,Terance Mann,1930681
 282,Nico Mannion,0
-283,Boban Marjanović,0
+903,Boban Marjanović,0
 1285,Lauri Markkanen,16475454
 1556,Naji Marshall,1782621
 1373,Caleb Martin,6479000
@@ -334,7 +334,7 @@ player_id,Player,Salary
 1534,Jaylen Nowell,1930681
 1518,Frank Ntilikina,2036318
 1396,Kendrick Nunn,5250000
-340,Jusuf Nurkić,0
+980,Jusuf Nurkić,0
 981,David Nwaba,0
 1473,Jordan Nwora,2800000
 1336,Royce O'Neale,9200000
@@ -368,7 +368,7 @@ player_id,Player,Salary
 1019,Michael Porter Jr.,0
 373,Otto Porter,0
 1318,Bobby Portis,10843350
-375,Kristaps Porziņģis,0
+1023,Kristaps Porziņģis,0
 1315,Dwight Powell,11080125
 1282,Norman Powell,16758621
 1364,Taurean Prince,7100000
@@ -399,7 +399,7 @@ player_id,Player,Salary
 405,Luka Šamanić,0
 406,JaKarr Sampson,0
 407,Dario Šarić,0
-408,Tomáš Satoranský,0
+1067,Tomáš Satoranský,0
 1071,Dennis Schröder,0
 410,Mike Scott,0
 1283,Collin Sexton,16700000
@@ -438,14 +438,14 @@ player_id,Player,Salary
 1138,Gary Trent Jr.,0
 1139,P.J. Tucker,0
 1227,Myles Turner,35096500
-448,Jonas Valančiūnas,0
+1143,Jonas Valančiūnas,0
 1145,Denzel Valentine,0
 1415,Jarred Vanderbilt,4374000
 1259,Fred VanVleet,21250000
 1413,Devin Vassell,4437000
 1552,Gabe Vincent,1815677
 1586,Noah Vonleh,1160955
-455,Nikola Vučević,0
+1150,Nikola Vučević,0
 1532,Dean Wade,1930681
 1543,Moritz Wagner,1878720
 1222,Kemba Walker,37281261
@@ -490,9 +490,6 @@ player_id,Player,Salary
 1359,Scottie Barnes,7644600
 528,Paris Bass,0
 1479,Charles Bassey,2674742
-540,D?vis Bert?ns,0
-549,Bogdan Bogdanovi?,0
-550,Bojan Bogdanovi?,0
 1561,Leandro Bolmaro,1709300
 555,Brandon Boston Jr.,0
 1416,James Bouknight,4362240
@@ -503,7 +500,6 @@ player_id,Player,Salary
 573,Greg Brown III,0
 581,Shaq Buchanan,0
 1563,Jared Butler,1674655
-590,Vlatko ?an?ar,0
 591,Devin Cannady,0
 601,Ahmad Caver,0
 1598,Justin Champagnie,853241
@@ -523,10 +519,8 @@ player_id,Player,Salary
 639,Javin DeLaurier,0
 1614,Mamadi Diakite,508891
 642,Cheick Diallo,0
-649,Luka Don?i?,0
 1571,Ayo Dosunmu,1563518
 1629,Jeff Dowtin,508891
-660,Goran Dragi?,0
 1430,Chris Duarte,3936960
 664,David Duke Jr.,0
 1596,Kris Dunn,1000001
@@ -571,7 +565,6 @@ player_id,Player,Salary
 1474,Jalen Johnson,2792640
 826,Joe Johnson,0
 1478,Keon Johnson,2681040
-833,Nikola Joki?,0
 1607,Carlik Jones,612162
 838,Herbert Jones,0
 839,Jemerrio Jones,0
@@ -594,7 +587,6 @@ player_id,Player,Salary
 895,Gabriel Lundberg,0
 1587,Sandro Mamukelashvili,1116112
 1455,Tre Mann,3046200
-903,Boban Marjanovi?,0
 1577,Miles McBride,1563518
 1650,Mac McClung,160856
 926,Cameron McGriff,0
@@ -614,7 +606,6 @@ player_id,Player,Salary
 970,RJ Nembhard Jr.,0
 973,Malik Newman,0
 1573,Daishen Nix,1563518
-980,Jusuf Nurki?,0
 992,Cameron Oliver,0
 1595,Eugene Omoruyi,1013119
 999,Jaysean Paige,0
@@ -626,7 +617,6 @@ player_id,Player,Salary
 1016,Yves Pons,0
 1018,Kevin Porter Jr.,0
 1020,Otto Porter Jr.,0
-1023,Kristaps Porzi??is,0
 1630,Micah Potter,508891
 1026,Myles Powell,0
 1029,Joshua Primo,0
@@ -638,7 +628,6 @@ player_id,Player,Salary
 1521,Jeremiah Robinson-Earl,2000000
 1601,Matt Ryan,806097
 1640,Olivier Sarr,257371
-1067,Tomá Satoransk?,0
 1663,Jordan Schakel,96514
 1597,Admiral Schofield,877940
 1072,Tre Scott,0
@@ -667,8 +656,6 @@ player_id,Player,Salary
 1132,Killian Tillie,0
 1567,Isaiah Todd,1575000
 1141,Rayjon Tucker,0
-1143,Jonas Valan?i?nas,0
-1150,Nikola Vu?evi?,0
 1395,Franz Wagner,5258280
 1154,Ish Wainright,0
 1156,Lonnie Walker IV,0
