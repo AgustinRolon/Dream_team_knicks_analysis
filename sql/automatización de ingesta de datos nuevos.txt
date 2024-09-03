@@ -1,6 +1,6 @@
 Guardar el Script de SQL en un Archivo:
 
-Guarda tu script SQL (sp_CargarDatos) en un archivo .sql, por ejemplo, CargarDatos.sql.
+Guarda tu script SQL (Load_All_Data) en un archivo .sql, por ejemplo, CargarDatos.sql.
 Crear un Archivo Batch:
 
 Crea un archivo .bat que ejecute el script SQL utilizando sqlcmd. Aquí te dejo un ejemplo de cómo podría ser el contenido del archivo batch:
