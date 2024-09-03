@@ -148,6 +148,7 @@ CREATE TABLE fact_player_stats (
     PTS FLOAT, -- Points (Puntos)
     divisor_pie FLOAT,
     pie FLOAT,
+	Predicted_PIE_XGB FLOAT,
     FOREIGN KEY (season_id) REFERENCES dim_season(season_id),
     FOREIGN KEY (team_id) REFERENCES dim_team(team_id),
     FOREIGN KEY (player_id) REFERENCES dim_player_info(player_id) 
