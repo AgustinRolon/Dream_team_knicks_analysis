@@ -29,7 +29,7 @@ SELECT TOP (5)* FROM dim_game_info
 
 -- CARGA DE DATOS EN LA TABLA dim_team 
 BULK INSERT dim_team
-FROM 'C:\CVS Carga\team_completo_filtrado.csv'
+FROM 'C:\pie carga\team_completo_filtrado.csv'
 WITH (
     FIELDTERMINATOR = ',',
     ROWTERMINATOR = '\n',
@@ -67,7 +67,7 @@ SELECT TOP (5)* FROM fact_game_stats
 
 --CARGA DE DATOS EN LA TABLA fact_player_stats
 BULK INSERT fact_player_stats
-FROM 'C:\pie carga\player_stats_ultimate.csv'
+FROM 'C:\pie carga\player_stats_with_ML.csv'
 WITH (
     FIELDTERMINATOR = ',',
     ROWTERMINATOR = '\n',

@@ -201,4 +201,3 @@ WHERE team_id NOT IN (SELECT team_id FROM dim_team);
 SELECT DISTINCT season_id
 FROM fact_player_stats
 WHERE season_id NOT IN (SELECT season_id FROM dim_season);
-;
