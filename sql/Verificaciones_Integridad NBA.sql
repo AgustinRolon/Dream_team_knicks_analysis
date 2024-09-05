@@ -81,10 +81,11 @@ FROM fact_player_stats
 WHERE primary_key_composed IS NULL
    OR player_id IS NULL
    OR player_name IS NULL
-   OR pos IS NULL
+   OR position IS NULL
    OR age IS NULL
-   OR team_abbrevation IS NULL
+   OR team_id IS NULL
    OR season_id IS NULL;
+
 
 -- Verificar duplicados en fact_draft (no debería haber duplicados en draft_id)
 SELECT draft_id, COUNT(*)
@@ -126,6 +127,77 @@ FROM fact_game_stats fg
 LEFT JOIN dim_season ds ON fg.season_id = ds.season_id
 WHERE ds.season_id IS NULL;
 
-select * from dim_game_info
+-- Verificar valores nulos en columnas críticas de fact_team_stats
 
-select* from fact_game_stats
+SELECT *
+FROM fact_team_stats
+WHERE season_id IS NULL
+   OR team_id IS NULL
+   OR team_abbreviation IS NULL
+   OR fgm IS NULL
+   OR fga IS NULL
+   OR fg_pct IS NULL
+   OR fg3m IS NULL
+   OR fg3a IS NULL
+   OR fg3_pct IS NULL
+   OR ftm IS NULL
+   OR fta IS NULL
+   OR ft_pct IS NULL
+   OR oreb IS NULL
+   OR dreb IS NULL
+   OR reb IS NULL
+   OR ast IS NULL
+   OR stl IS NULL
+   OR blk IS NULL
+   OR tov IS NULL
+   OR pf IS NULL
+   OR pts IS NULL
+   OR plus_minus IS NULL
+   OR pie_denominador IS NULL;
+
+-- Verificar valores duplicados en la columna primary_key_composed de fact_player_stats
+SELECT primary_key_composed, COUNT(*)
+FROM fact_player_stats
+GROUP BY primary_key_composed
+HAVING COUNT(*) > 1;
+
+-- Verificar valores duplicados en combinación de season_id y team_id en fact_team_stats
+SELECT season_id, team_id, COUNT(*)
+FROM fact_team_stats
+GROUP BY season_id, team_id
+HAVING COUNT(*) > 1;
+
+-- Verificar equipos que no existen en dim_team
+SELECT DISTINCT team_id
+FROM fact_team_stats
+WHERE team_id NOT IN (SELECT team_id FROM dim_team);
+
+-- Verificar temporadas que no existen en dim_season
+SELECT DISTINCT season_id
+FROM fact_team_stats
+WHERE season_id NOT IN (SELECT season_id FROM dim_season);
+
+-- Verificar jugadores que no existen en dim_player_info
+SELECT DISTINCT player_id
+FROM fact_player_stats
+WHERE player_id NOT IN (SELECT player_id FROM dim_player_info);
+
+-- Verificar equipos que no existen en dim_team
+SELECT DISTINCT team_id
+FROM fact_player_stats
+WHERE team_id NOT IN (SELECT team_id FROM dim_team);
+
+-- Verificar jugadores que no existen en dim_player_info
+SELECT DISTINCT player_id
+FROM fact_player_stats
+WHERE player_id NOT IN (SELECT player_id FROM dim_player_info);
+
+-- Verificar equipos que no existen en dim_team
+SELECT DISTINCT team_id
+FROM fact_player_stats
+WHERE team_id NOT IN (SELECT team_id FROM dim_team);
+
+-- Verificar temporadas que no existen en dim_season
+SELECT DISTINCT season_id
+FROM fact_player_stats
+WHERE season_id NOT IN (SELECT season_id FROM dim_season);
