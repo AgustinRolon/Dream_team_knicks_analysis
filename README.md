@@ -20,8 +20,11 @@ Este repositorio alberga un análisis exhaustivo del rendimiento de los jugadore
 # 📂 Estructura del Repositorio
 
 - `csv/`: Contiene los csv resultantes del proyecto.
+- `notebook_machine_learning/`: Scrip de ML para predecir el rendimiento futuro de jugadores en la NBA.
+- - `notebooks_proceso_etl/`: Scripts de ETL para la carga y transformación de datos.
+- `powerbi/`: Carpeta con el archivo .pbix.
 - `sql/`: Scripts SQL para la creación de tablas y objetos en la base de datos, junto con la ingesta de datos y la automatizacion.
-- `notebooks_proceso_etl/`: Scripts de ETL para la carga y transformación de datos.
+
   
 # 🔨 Pasos Realizados
 
@@ -33,7 +36,7 @@ Este repositorio alberga un análisis exhaustivo del rendimiento de los jugadore
 - **Carga de Datos**: Implementación de un flujo ETL para la importación de datos a la base de datos.
 - **Validación de Acceso**: Aseguramiento de que todos los miembros del equipo tengan acceso a la base de datos y puedan extraer información sin problemas.
 - **Automatización de la Ingesta de Datos**: Implementación de un método automatizado para la ingesta de nuevos datos.
-- **Machine
+- **Machine Learning**: Modelo XGBoost Regression para predecir el rendimiento futuro de jugadores en la NBA.
 - **Crear el Archivo .pbix**: Crear el archivo .pbix en Power BI.
 - **Importar la Data a Power BI**: Importación los datos a Power BI conectandose desde SQL-Server.
 - **Medidas/Columnas/Relaciones Necesarias para el Análisis**: Creación de las medidas, columnas calculadas y relaciones necesarias para el análisis.
