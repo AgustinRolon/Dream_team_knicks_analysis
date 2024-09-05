@@ -22,9 +22,6 @@ Este repositorio alberga un análisis exhaustivo del rendimiento de los jugadore
 - `csv/`: Contiene los csv resultantes del proyecto.
 - `sql/`: Scripts SQL para la creación de tablas y objetos en la base de datos, junto con la ingesta de datos y la automatizacion.
 - `notebooks_proceso_etl/`: Scripts de ETL para la carga y transformación de datos.
-
-# 🚧 Estado del Proyecto 🚧
-- **En construcción**
   
 # 🔨 Pasos Realizados
 
@@ -36,7 +33,13 @@ Este repositorio alberga un análisis exhaustivo del rendimiento de los jugadore
 - **Carga de Datos**: Implementación de un flujo ETL para la importación de datos a la base de datos.
 - **Validación de Acceso**: Aseguramiento de que todos los miembros del equipo tengan acceso a la base de datos y puedan extraer información sin problemas.
 - **Automatización de la Ingesta de Datos**: Implementación de un método automatizado para la ingesta de nuevos datos.
-
+- **Machine
+- **Crear el Archivo .pbix**: Crear el archivo .pbix en Power BI.
+- **Importar la Data a Power BI**: Importación los datos a Power BI conectandose desde SQL-Server.
+- **Medidas/Columnas/Relaciones Necesarias para el Análisis**: Creación de las medidas, columnas calculadas y relaciones necesarias para el análisis.
+- **Diseñar los Reportes y Gráficos a Usar**: Diseño de los gráficos que se utilizarán en el dashboard.
+- **Etapa de Pruebas de Calidad del Reporte**: Pruebas de calidad para asegurar la precisión y funcionalidad del reporte.
+  
  # Proceso ETL
 
 ## 🌟 **Extracción (Extract)**
@@ -109,12 +112,13 @@ Se implementaron múltiples estrategias de optimización para mejorar el rendimi
 - **Numpy** 🔢
 - **Pandas** 🐼
 - **SQL Server** 🗄️
+- **Power BI** 📊
 
 # 📂 **Fuentes de Datos**
 
 - **Datos de Desempeño de Jugadores**: Los datos entregados por la organización no incluían información detallada sobre el desempeño de los jugadores por temporada. Para completar el análisis, se incorporaron las siguientes fuentes adicionales:
 
-- **[NBA Database](https://www.kaggle.com/datasets/jamiewelsh2/nba-player-salaries-2022-23-season?select=nba_salaries.csv)**: Información sobre equipos, jugadores (incluyendo el equipo al que pertenecen y su respectivo Draft de la NBA) y el draft de la NBA desde 1946 hasta 2023.
+- **[NBA Database](https://www.kaggle.com/datasets/wyattowalsh/basketball/data?select=csv)**: Información sobre equipos, jugadores (incluyendo el equipo al que pertenecen y su respectivo Draft de la NBA) y el draft de la NBA desde 1946 hasta 2023.
 
 - **[NBA Player Salaries (2022-23 Season)](https://www.kaggle.com/datasets/jamiewelsh2/nba-player-salaries-2022-23-season?select=nba_salaries.csv)**: Datos específicos de la temporada de cada jugador, incluyendo puntos, bloqueos, asistencias, salarios, entre otros.
 
@@ -123,13 +127,6 @@ Se implementaron múltiples estrategias de optimización para mejorar el rendimi
 - **[NBA 2020-2021 Season Player Stats](https://www.kaggle.com/datasets/umutalpaydn/nba-20202021-season-player-stats/)**: Estadísticas detalladas de los jugadores para la temporada 2020-2021.
 
 Estas fuentes adicionales completan el conjunto de datos necesario para un análisis exhaustivo del desempeño de los jugadores en las temporadas especificadas.
-
-
-# 📅 Próximos Pasos
-
-- **Limpieza y Transformación de Datos**: Proceso de limpieza y preparación de datos para análisis detallado.
-- **Desarrollo del Informe**: Creación del archivo `.pbix` y diseño de reportes en Power BI.
-- **Desarrollo de Modelos y Visualizaciones**: Creación de medidas, columnas y relaciones necesarias para los análisis y visualizaciones.
 
 # ✨ Cómo Contribuir
 
