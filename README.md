@@ -1,7 +1,7 @@
 # 🏀 Análisis Avanzado del Rendimiento de Jugadores de la NBA 🏀
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/245c7a43-544f-4a72-8ee6-c7e9fc161ea9" width="600" height="400" alt="Logo-Proyecto"/>
+  <img src="https://upload.wikimedia.org/wikipedia/en/thumb/2/25/New_York_Knicks_logo.svg/1200px-New_York_Knicks_logo.svg.png" width="600" height="400" alt="Logo-Proyecto"/>
 </p>
 
 # 📌 Descripción del Proyecto
