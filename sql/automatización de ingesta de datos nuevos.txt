@@ -1,16 +1,25 @@
 Guardar el Script de SQL en un Archivo:
 
-Guarda tu script SQL (Load_All_Data) en un archivo .sql, por ejemplo, CargarDatos.sql.
+Guarda tu script SQL (Load_All_Data) en un archivo .sql, por ejemplo, Automatizacion_carga_datos.sql.
 Crear un Archivo Batch:
 
-Crea un archivo .bat que ejecute el script SQL utilizando sqlcmd. Aquí te dejo un ejemplo de cómo podría ser el contenido del archivo batch:
-batch
+Crea un archivo .bat que ejecute el script SQL utilizando sqlcmd. 
+Aquí te dejo un ejemplo de cómo podría ser el contenido del archivo batch (.bat)
 
 Copiar código:
 
 @echo off
-sqlcmd -S <TuServidorSQL> -d NBA_Player_Performance_DB -U <TuUsuarioSQL> -P <TuContraseñaSQL> -i "C:\Ruta\CargarDatos.sql"
+sqlcmd -S <TuServidorSQL> -d NBA_Player_Performance_DB -U <TuUsuarioSQL> -P <TuContraseñaSQL> -i "C:\Ruta\Automatizacion_carga_datos.sql"
 Reemplaza <TuServidorSQL>, <TuUsuarioSQL>, <TuContraseñaSQL>, y C:\Ruta\CargarDatos.sql con los valores correctos para tu entorno.
+
+o
+
+@echo off
+sqlcmd -S <TuServidorSQL> -d NBA_Player_Performance_DB -E -i "C:\Ruta\Automatizacion_carga_datos.sql"
+
+en el caso de tener la autenticación de Windows para conectarte.
+
+
 Configurar una Tarea Programada en Windows:
 
 Abre el "Task Scheduler" (Programador de Tareas) en Windows.

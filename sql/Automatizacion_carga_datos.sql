@@ -88,7 +88,7 @@ BEGIN
     BEGIN TRY
         PRINT 'Cargando datos en fact_player_stats...';
         BULK INSERT fact_player_stats
-        FROM 'C:\pie carga\player_stats_ultimate.csv'
+        FROM 'C:\pie carga\player_stats_with_ML.csv'
         WITH (
             FIELDTERMINATOR = ',',
             ROWTERMINATOR = '\n',
