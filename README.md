@@ -17,6 +17,65 @@ Este repositorio alberga un análisis exhaustivo del rendimiento de los jugadore
 - **Identificar jóvenes promesas**: Descubrir y reclutar talentos universitarios prometedores para asegurar el futuro del equipo.
 - **Optimizar las estrategias de reclutamiento**: Enfocar los esfuerzos de scouting en las universidades más influyentes de la NBA.
 
+# 📊 Insights
+
+## 📌 Parámetros
+
+Se han establecido los siguientes parámetros para definir a los titulares y a las promesas de acuerdo a su edad:
+- **Titulares:** 24-32 años.
+- **Suplentes:** 19-24 años.
+
+### 🏀 Dream Team
+
+**Titulares:**
+1. 🏅 JAMES HARDEN - PG (Base)
+2. 🏅 JOEL EMBIID - C (Pívot)
+3. 🏅 GIANNIS ANTETOKOUNMPO - PF (Ala-Pívot)
+4. 🏅 JAYSON TATUM - SF (Alero)
+5. 🏅 JAYLEN BROWN - SG (Escolta)
+   
+**Suplentes:**
+1. 🌟 TYRESE HALIBURTON - PG (Base)
+2. 🌟 SHAI GILGEOUS-ALEXANDER - SG (Escolta)
+3. 🌟 KELDON JOHNSON - SF (Alero)
+4. 🌟 WENDELL CARTER JR - PF (Ala-Pívot)
+5. 🌟 EVAN MOBLEY - C (Pívot)
+
+## 📝 Análisis de Métricas
+
+La métrica más relevante para el análisis fue el **PIE** (Player Impact Estimate). Además, se evaluaron las mejores métricas según las posiciones de los jugadores, considerando:
+- Pases 🏀
+- Tiros en cancha 🎯
+- Tiros triples 🎯
+- Asistencias efectivas 🎯
+- Pérdidas de balón 🚫
+- Puntos por jugador 🏆
+
+Todo esto, junto al análisis de duplas y la evaluación del salario de cada jugador, permitió alcanzar una verdadera sinergia del equipo y la directiva. Se consideró tanto la calidad del jugador como su sinergia con otros jugadores, ajustándose a los niveles presupuestarios permitidos por la NBA 💰.
+
+## 📊 ¿Qué es la métrica PIE?
+**PIE** es una estadística que mide el impacto de un jugador en el resultado de un partido, considerando tanto aspectos ofensivos como defensivos. Se expresa como un porcentaje que refleja la influencia total del jugador en el juego. Sin embargo, PIE no incluye la variable de la edad, un factor crucial para evaluar el rendimiento futuro de los jugadores.
+
+## 🛠️ Optimización del Modelo
+Para mejorar la precisión de las predicciones, incorporamos la edad en el análisis y creamos un modelo de machine learning utilizando **XGBoost**. Esta técnica de boosting es eficiente y precisa para manejar datos tabulares y predecir el valor futuro de PIE.
+
+## 🚀 Resultados
+El modelo XGBoost mejoró la predicción de PIE, permitiendo una selección más informada de los jugadores. Con este enfoque, identificamos jugadores que no solo tienen un alto impacto actual, sino también un rendimiento sostenido en el futuro.
+
+## 🏁 Conclusión
+La combinación de la métrica PIE ajustada por edad y el uso de XGBoost nos permitió optimizar la estrategia de selección de jugadores para los New York Knicks, creando un equipo más competitivo y con proyección a largo plazo.
+
+---
+
+## 🏫 Scouting en las Universidades Más Influyentes de la NBA
+
+Las universidades más influyentes en el **Draft de la NBA** son:
+
+- **Kentucky**: Posiciones más drafteadas — Escoltas y Bases.
+- **Duke**: Posiciones más drafteadas — Aleros.
+- **Arizona**: Posiciones más drafteadas — Aleros y Escoltas.
+
+
 # 📂 Estructura del Repositorio
 
 - `csv/`: Contiene los csv resultantes del proyecto.
